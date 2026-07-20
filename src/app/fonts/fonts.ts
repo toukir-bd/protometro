@@ -44,6 +44,7 @@ export const mont = localFont({
   ],
   variable: "--font-mont",
   display: "swap",
+  preload: false,
 });
 
 export const denton = localFont({
@@ -86,4 +87,5 @@ export const denton = localFont({
   ],
   variable: "--font-denton",
   display: "swap",
+  preload: false,
 });

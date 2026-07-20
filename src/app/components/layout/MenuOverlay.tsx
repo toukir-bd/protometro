@@ -53,7 +53,14 @@ export default function MenuOverlay({
         >
           <div className="flex items-center justify-between border-b border-white/10 px-8 py-8 lg:px-16">
             <Link href="/" onClick={onClose} className="text-2xl font-semibold tracking-wider">
-              <Image src="/img/elements/white-logo.webp" alt="Logo" width={195} height={32}/>
+              <Image 
+                src="/img/elements/white-logo.webp"
+                alt="Logo"
+                width={195}
+                height={32}
+                className="w-auto h-auto"
+                priority
+              />
             </Link>
             <button onClick={onClose}
               className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 transition hover:bg-white hover:text-black">
