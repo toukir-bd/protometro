@@ -1,5 +1,6 @@
 
-@import "tailwindcss";
+// @import "tailwindcss";
+@use "tailwindcss";
 
 :root {
   --font-primary: var(--font-mont);

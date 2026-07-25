@@ -2,7 +2,7 @@
 import "./globals.scss";
 import type { Metadata } from "next";
 import { mont, denton } from "./fonts/fonts";
-import MainLayout from "./components/layout/MainLayout";
+import MainLayout from "../components/layout/MainLayout";
 
 export const metadata: Metadata = {
   title: "BeRiser",

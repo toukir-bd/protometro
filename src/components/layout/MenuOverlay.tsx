@@ -51,14 +51,14 @@ export default function MenuOverlay({
           transition={{ duration: 0.35 }}
           className="fixed inset-0 z-50 bg-black text-white"
         >
-          <div className="flex items-center justify-between border-b border-white/10 px-8 py-8 lg:px-16">
+          <div className="flex items-center justify-between border-b border-white/10 px-8 py-6 lg:px-16">
             <Link href="/" onClick={onClose} className="text-2xl font-semibold tracking-wider">
               <Image 
                 src="/img/elements/white-logo.webp"
                 alt="Logo"
-                width={195}
-                height={32}
-                className="w-auto h-auto"
+                width={200}
+                height={41}
+                className="w-[200px] h-auto"
                 priority
               />
             </Link>
