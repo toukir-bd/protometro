@@ -10,10 +10,9 @@ export default function NotFound() {
                     Page Not Found
                 </h2>
                 <p className="mt-4 text-neutral-400">
-                    The page you're looking for doesn't exist or has been moved.
+                    The page you&#39;re looking for doesn&#39;t exist or has been moved.
                 </p>
-                <Link href="/" className="mt-10 inline-flex rounded-full border border-white px-8 py-3 text-sm font-medium text-white 
-                transition hover:bg-white hover:text-black">
+                <Link href="/" className="mt-10 inline-flex rounded-full border border-white px-8 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-black">
                     Back to Home
                 </Link>
             </div>

@@ -25,8 +25,8 @@ export default function Splash() {
                     to web universe
                 </h1>
                 <p className="mt-8 text-lg text-center text-neutral-400">
-                    It's never just about building a website, app, or custom software. <br />
-                    it's about creating trust, meaningful connections, and digital <br/>
+                    It&#39;s never just about building a website, app, or custom software. <br />
+                    it&#39;s about creating trust, meaningful connections, and digital <br/>
                     experiences that inspire confidence.
                 </p>
             </div>

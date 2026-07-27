@@ -15,9 +15,9 @@ export default function Header({ onMenuOpen }: HeaderProps) {
           <Image 
             src="/img/elements/white-logo.webp"
             alt="Logo"
-            width={200}
-            height={41}
-            className="w-[200px] h-auto"
+            width={238}
+            height={38}
+            className="w-[238] h-[38px]"
             priority
           />
         </Link>
