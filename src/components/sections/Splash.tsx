@@ -17,7 +17,7 @@ export default function Splash() {
                     alt="Logo"
                     width={300}
                     height={300}
-                    className="w-[300px] h-auto px-5"
+                    className="w-[300px] h-[300px] px-5"
                     priority
                 />
                 <h1 className="text-[109px] font-black tracking-normal leading-[115px] text-center">
