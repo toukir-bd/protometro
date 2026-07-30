@@ -49,16 +49,16 @@ export default function MenuOverlay({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35 }}
-          className="fixed inset-0 z-50 bg-black text-white"
+          className="fixed inset-0 z-50 bg-[#061018] text-white"
         >
           <div className="flex items-center justify-between border-b border-white/10 px-8 py-6 lg:px-16">
             <Link href="/" onClick={onClose} className="text-2xl font-semibold tracking-wider">
-              <Image 
+              <Image
                 src="/img/elements/white-logo.webp"
-                alt="Logo"
-                width={238}
-                height={38}
-                className="w-[238] h-[38px]"
+                alt="BeRiser Logo"
+                width={200}
+                height={41}
+                className="h-auto w-full max-w-[200px]"
                 priority
               />
             </Link>
@@ -79,10 +79,10 @@ export default function MenuOverlay({
                     duration: 0.45,
                   }}
                 >
-                  <Link href={item.href} onClick={onClose} className="group mb-8 flex items-center justify-between">
-                    <span className="text-5xl font-light transition duration-300 group-hover:translate-x-3 group-hover:text-gray-400 lg:text-7xl">
+                  <Link href={item.href} onClick={onClose} className="group mb-12 flex items-center justify-between">
+                    <h1 className="text-5xl font-black transition duration-300 group-hover:translate-x-3 group-hover:text-[#F06844] lg:text-7xl tracking-wider">
                       {item.title}
-                    </span>
+                    </h1>
                     <span className="text-sm uppercase tracking-[4px] text-gray-500 opacity-0 transition duration-300 group-hover:opacity-100">
                       →
                     </span>
