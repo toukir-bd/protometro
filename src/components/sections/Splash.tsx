@@ -7,8 +7,7 @@ export default function Splash() {
     <>
         <div className="flex flex-col items-center justify-center relative min-h-screen">
             <div className="absolute inset-0 pointer-events-none w-full min-h-screen z-0">
-                <video autoPlay loop muted playsInline preload="metadata" className="initial visible block pointer-events-none h-full object-cover w-full"
-                    src="/videos/hero.mp4">
+                <video autoPlay loop muted playsInline preload="metadata" className="initial visible block pointer-events-none h-full object-cover w-full" src="/videos/hero.mp4">
                 </video>
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">

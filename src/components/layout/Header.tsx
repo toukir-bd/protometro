@@ -21,12 +21,12 @@ export default function Header({ onMenuOpen }: HeaderProps) {
             priority
           />
         </Link>
-        <button onClick={onMenuOpen} className="group cursor-pointer flex h-14 w-14 items-center justify-center border border-white/20 hover:bg-black/30 hover:text-black rounded-full">
+        <button onClick={onMenuOpen} className="group cursor-pointer flex h-14 w-14 items-center justify-center border-2 border-gray-700 hover:text-black rounded-full">
           <span className="flex flex-col space-y-[3px]">
-            <span className="w-[22px] h-[2px] bg-white transition-all ease-in-out group-hover:w-[28px]"></span>
-            <span className="w-[18px] h-[2px] bg-white transition-all ease-in-out  group-hover:w-[28px]"></span>
-            <span className="w-[28px] h-[2px] bg-white transition-all ease-in-out  group-hover:w-[28px]"></span>
-            <span className="w-[24px] h-[2px] bg-white transition-all ease-in-out  group-hover:w-[28px]"></span>
+            <span className="w-[22px] h-[2px] bg-white group-hover:bg-[#F06844] transition-all ease-in-out group-hover:w-[28px]"></span>
+            <span className="w-[18px] h-[2px] bg-white group-hover:bg-[#F06844] transition-all ease-in-out  group-hover:w-[28px]"></span>
+            <span className="w-[28px] h-[2px] bg-white group-hover:bg-[#F06844] transition-all ease-in-out  group-hover:w-[28px]"></span>
+            <span className="w-[24px] h-[2px] bg-white group-hover:bg-[#F06844] transition-all ease-in-out  group-hover:w-[28px]"></span>
           </span>
         </button>
       </div>
