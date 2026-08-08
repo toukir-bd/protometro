@@ -32,6 +32,26 @@ export default function Splash() {
                     </p>
                 </div>
             </div>
+            <div className="absolute left-0 top-50 bg-gradient-to-b from-[#061018]/20 to-[#061018]/0 z-10 flex flex-col items-center justify-center">
+                <Image
+                    src="/img/elements/side-frame.png"
+                    alt="BeRiser Logo"
+                    width={250}
+                    height={300}
+                    className="w-full max-w-[250px] h-auto"
+                    priority
+                />
+            </div>
+            <div className="absolute right-0 top-50 bg-gradient-to-b from-[#061018]/20 to-[#061018]/0 z-10 flex flex-col items-center justify-center">
+                <Image
+                    src="/img/elements/side-frame-0.png"
+                    alt="BeRiser Logo"
+                    width={250}
+                    height={300}
+                    className="w-full max-w-[250px] h-auto"
+                    priority
+                />
+            </div>
         </div>
     </>
   );
