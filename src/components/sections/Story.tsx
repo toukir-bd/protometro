@@ -16,12 +16,10 @@ const lines = [
 
 export default function Story() {
   const sectionRef = useRef<HTMLElement>(null);
-
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
   });
-
   return (
     <section ref={sectionRef} className="relative min-h-[300vh]">
       <div className="sticky top-0 flex min-h-screen items-center px-[8vw] py-20">
