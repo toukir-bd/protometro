@@ -49,8 +49,7 @@ export default function MenuOverlay({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.35 }}
-          className="fixed inset-0 z-50 bg-[#061018] text-white"
-        >
+          className="fixed inset-0 z-50 bg-[#061018] text-white">
           <div className="flex items-center justify-between border-b border-white/10 px-8 py-6 lg:px-16 bg-[#061018]">
             <Link href="/" onClick={onClose} className="text-2xl font-semibold tracking-wider">
               <Image
@@ -110,18 +109,19 @@ export default function MenuOverlay({
               >
                 <p className="mb-4 text-md font-[400] text-center uppercase tracking-[10px] text-gray-500">Welcome</p>
                 <p className="mb-6 text-4xl text-center font-light tracking-tight leading-15 lg:text-4xl">
-                  <span className="text-[#1DB67E] text-5xl font-medium">Let's Transform</span> 
+                  <span className="text-[#1DB67E] text-5xl font-normal">Let's Transform</span> 
                   <br />
                   Ambition Into 
                   <br />
-                  <span className="text-[#1DB67E] text-5xl font-light">Digital Masterpieces.</span>
+                  <span className="text-[#1DB67E] text-5xl font-normal">Digital Masterpieces.</span>
                 </p>
-                <p className="text-md text-center leading-7 text-gray-500">
+                <p className="text-md text-center font-medium leading-7 text-gray-500">
                   We craft exceptional digital experiences through strategy, creativity, and technology designed to 
                   elevate brands and inspire lasting impact.
                 </p>
                 <a href="/get-start" onClick={onClose} className="mt-8 inline-block rounded-full bg-[#F06844] px-8 py-4 text-lg font-semibold text-white transition hover:bg-[#1DB67E]">
                   Get Started
+
                 </a>
               </motion.div>
             </div>

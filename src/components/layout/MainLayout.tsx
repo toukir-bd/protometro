@@ -15,7 +15,7 @@ export default function MainLayout({
   return (
     <>
       <Header onMenuOpen={() => setMenuOpen(true)} />
-      <MenuOverlay isOpen={menuOpen} onClose={() => setMenuOpen(false)}/>
+      <MenuOverlay isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       <main>
         <div className="mx-auto max-w-full">
           {children}

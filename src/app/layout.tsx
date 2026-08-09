@@ -3,6 +3,7 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { mont, denton } from "./fonts/fonts";
 import MainLayout from "../components/layout/MainLayout";
+import BgBackdrop from "@/components/props/BgBackdrop";
 
 export const metadata: Metadata = {
   title: "BeRiser",
@@ -21,8 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${mont.variable} ${denton.variable}`}>
-      <body className="bg-[#061018] text-white">
-        <MainLayout>{children}</MainLayout>
+      <body className="text-white bg-[#061018]">
+        <div className="relative inset-0 z-10 bg-[#061018]/90 backdrop-blur-[100px]">
+          <MainLayout>{children}</MainLayout>
+        </div>
+        <BgBackdrop />
       </body>
     </html>
   );
