@@ -1,65 +1,64 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
-const lines = [
-  "the story of CRED begins",
-  "with trust. we believe",
-  "individuals who've proven",
-  "their trustworthiness",
-  "deserve better: better",
-  "experiences, better rewards,",
-  "better rules. this is the status",
-  "quo we're building. make it",
-  "to the club, and experience",
-];
+import { useEffect, useRef } from "react";
+
+const text = `
+
+We believe every brand has the potential to rise above the ordinary. It's more than building a website, app, or software. It's about creating trust, meaningful connections, and digital experiences that leave a lasting impression.
+
+Through thoughtful design and modern development, we help businesses become memorable, build credibility, and grow with confidence.
+
+Every successful partnership begins with trust. We earn it through creativity, transparency, and results. Let's build trust—and together, build a brand that rises above the rest.
+`;
 
 export default function Story() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end end"],
-  });
-  return (
-    <section ref={sectionRef} className="relative min-h-[300vh]">
-      <div className="sticky top-0 flex min-h-screen items-center px-[8vw] py-20">
-        <p className="max-w-[1200px] text-[clamp(42px,5.2vw,82px)] leading-[1.15] tracking-[-0.035em]">
-          {lines.map((line, index) => {
-            const start = index / lines.length;
-            const end = (index + 1) / lines.length;
-            return (
-              <StoryLine
-                key={index}
-                text={line}
-                progress={scrollYProgress}
-                start={start}
-                end={end}
-              />
-            );
-          })}
-        </p>
-      </div>
-    </section>
-  );
-}
+  const words = text.trim().split(/\s+/);
 
-function StoryLine({
-    text,
-    progress,
-    start,
-    end,
-  }:{
-    text: string;
-    progress: any;
-    start: number;
-    end: number;
-  }){
-  const color = useTransform(
-    progress,
-    [start, end],
-    ["#292929", "#ffffff"]
-  );
+  const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const triggerPoint = window.innerHeight * 0.45;
+
+      wordRefs.current.forEach((word) => {
+        if (!word) return;
+
+        const rect = word.getBoundingClientRect();
+
+        if (rect.top < triggerPoint) {
+          word.classList.add("!text-white");
+        } else {
+          word.classList.remove("!text-white");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <motion.span style={{color}} className="block font-serif">{text}</motion.span>
+    <section className="max-w-[800px] w-full mx-auto px-4 py-[clamp(80px,10vw,120px)]">
+      <h2>The story of BeRiser begins with ambition.</h2>
+      <h3 className="max-w-[800px] text-[clamp(42px,5.1vw,52px)] font-medium leading-[1.55] tracking-tight text-[#292929] break-words">
+        {words.map((word, index) => (
+          <span
+            key={`${word}-${index}`}
+            ref={(element) => {
+              wordRefs.current[index] = element;
+            }}
+            className="mr-[0.22em] transition-colors duration-500">
+            {word}
+          </span>
+        ))}
+      </h3>
+    </section>
   );
 }
