@@ -18,7 +18,7 @@ export default function Story() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const triggerPoint = window.innerHeight * 0.45;
+      const triggerPoint = window.innerHeight * 0.35;
 
       wordRefs.current.forEach((word) => {
         if (!word) return;
@@ -47,7 +47,7 @@ export default function Story() {
   return (
     <section className="max-w-[800px] w-full mx-auto px-4 py-[clamp(80px,10vw,120px)]">
       <h2>The story of BeRiser begins with ambition.</h2>
-      <h3 className="max-w-[800px] text-[clamp(42px,5.1vw,52px)] font-medium leading-[1.55] tracking-tight text-[#292929] break-words">
+      <h3 className="max-w-[800px] text-[clamp(42px,5.1vw,52px)] font-medium leading-[1.55] tracking-tight text-[#292929] break-word">
         {words.map((word, index) => (
           <span
             key={`${word}-${index}`}
